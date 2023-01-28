@@ -45,12 +45,13 @@ $pathsToInstalledSoftware=@(
   'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\',
   'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
 )
+Out-File $currPath        # removes old file and add new empty one
 foreach($path in $pathsToInstalledSoftware){
   Get-ChildItem -Path $path | 
     Get-ItemProperty | 
       Select-Object DisplayName, Publisher, InstallDate, DisplayVersion, InstallLocation |
         Format-Table -AutoSize |  
-          Out-File $currPath
+          Out-File $currPath -Append
 }
 
 
