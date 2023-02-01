@@ -67,5 +67,10 @@ powercfg.exe -batteryreport -output $currPath
 Write-Host "`n}`n"
 
 
+Write-Host " Get-PSDrive -PSProvider 'FileSystem'"
+$currPath = Join-Path -path $savePath -childpath "\PSProvider-FileSystem.txt"
+Get-PSDrive -PSProvider 'FileSystem' |
+  Out-File $currPath
+
 
 Write-Host ("`n`n finished.`n See results at {0}" -f $savePath)
