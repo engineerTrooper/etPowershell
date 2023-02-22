@@ -1,0 +1,16 @@
+{
+    "help" :
+    {
+        "msg" : "The help gives you all information about etPowerShell with Scripts, Modules, Functions, ...`n",
+        "fullDocumentation" : "Check out the GitHub Repository. Execute File: \" .\\info.ps1 \" for more information!"
+    },
+
+    "info" : 
+    {
+        "version" : "alpha",
+        "releaseDate" : "2023-XX-XX",
+        "originSource" : "https://github.com/engineertrooper/etPowerShell",
+        "license" : "GNU GPL v3",
+        "licenseFile" : "https://github.com/engineertrooper/etPowerShell/blob/main/LICENSE"
+    }
+}
